@@ -1,29 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a STAY - Formulario Fandom Stray Kids</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleformulario.css">
-    <title>FormularioFandom</title>
 </head>
 <body>
-    <fieldset>
+    <nav class="form-top-nav">
+        <a href="index.html" class="btn-back-home">← Volver al Inicio</a>
+    </nav>
 
-    <legend>Únete al fandom</legend>
-        Nombre:
-        <input type="text" name="nombre" size="30"><br><br>
-        Apellidos:
-        <input type="text" name="apellidos"><br><br>
-        Ingrese correo electrónico:
-        <input type="text" name="mail"><br><br>
-        Teléfono móvil:
-        <input type="text" name="telefono" size="9"><br><br>
-        <input type="submit" value="Enviar">
-       
-        
+    <main class="formulario-card">
+        <header class="form-header">
+            <span class="fandom-badge">✨ Official STAY Fandom</span>
+            <h1>Únete al Fandom</h1>
+            <p>Forma parte de la comunidad global de STAY. Recibe noticias de Stray Kids, alertas de comebacks y contenido exclusivo.</p>
+        </header>
 
+        <form id="fandomForm" action="#" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre <span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos <span class="required">*</span></label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+                </div>
+            </div>
 
-    </fieldset>
-    
+            <div class="form-group">
+                <label for="mail">Correo electrónico <span class="required">*</span></label>
+                <input type="email" id="mail" name="mail" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono móvil <span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej. 612345678" pattern="[0-9]{9,15}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="biasSelect">¿Quién es tu integrante favorito (Bias)?</label>
+                <select id="biasSelect" name="bias">
+                    <option value="Todos / OT8">Todos / OT8 (¡Los 8 chicos!)</option>
+                    <option value="Bang Chan">Bang Chan (Líder, Productor)</option>
+                    <option value="Lee Know">Lee Know (Bailarín Principal)</option>
+                    <option value="Changbin">Changbin (Rapero Principal, 3RACHA)</option>
+                    <option value="Hyunjin">Hyunjin (Bailarín, Visual)</option>
+                    <option value="Han">Han (Rapero, Vocalista, 3RACHA)</option>
+                    <option value="Felix">Felix (Rapero, Bailarín)</option>
+                    <option value="Seungmin">Seungmin (Vocalista Principal)</option>
+                    <option value="I.N">I.N (Vocalista, Maknae)</option>
+                </select>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="notificaciones" name="notificaciones" checked>
+                <label for="notificaciones">Deseo recibir correos con lanzamientos de nuevos álbumes, preventas y eventos de Stray Kids.</label>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <span>Enviar Solicitud al Fandom</span> ✨
+            </button>
+        </form>
+    </main>
+
+    <footer class="form-footer-note">
+        <p>&copy; 2026 Anny Cambero • Proyecto Web Estático Stray Kids</p>
+    </footer>
+
+    <!-- Script Interactivo -->
+    <script src="main.js"></script>
 </body>
 </html>
